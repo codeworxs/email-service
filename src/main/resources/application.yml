@@ -1,0 +1,57 @@
+spring:
+  jpa: 
+    properties:
+      hibernate: 
+        jdbc:
+          lob:  
+            non_contextual_creation: true
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/web/
+    suffix: .html
+    servlet:
+      content-type: text/html
+  mail:
+    default-encoding: UTF-8
+    host: email-smtp.us-west-2.amazonaws.com
+    username: AKIAVY4DUVI24ACZVR7V
+    password: BH6nS3WElDp0FMZM0TmyhVMZdH0E+FpjUyFPiRU1W+VL
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+codeworxs:
+  company:
+    name: resume.lk
+  admin.contact.email: contact@resume.lk
+  user:
+    email:
+      confirm:
+        subject: Confirm Your Email Address
+        template: email-confirmation.ftl
+        address: team@miracleofasia.com
+        uri: /api/v1/user-management/confirm-email-address
+    detail:
+      uri: /api/v1/user-management/user/id
+    signup:
+      confirm:
+        uri: /user/signup/success
+      resend:
+        uri: /user/signup/resend
+    password:
+      reset:
+        email:
+          template: password-reset-email.ftl
+          subject: Reset your password
+        confirm.uri: /api/v1/user-management/reset-password
+        form.uri: /user/password-reset
