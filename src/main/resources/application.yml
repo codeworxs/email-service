@@ -19,8 +19,8 @@ spring:
   mail:
     default-encoding: UTF-8
     host: email-smtp.us-west-2.amazonaws.com
-    username: AKIAVY4DUVI24ACZVR7V
-    password: BH6nS3WElDp0FMZM0TmyhVMZdH0E+FpjUyFPiRU1W+VL
+    username: test
+    password: +FpjUyFPiRU1W+VL
     port: 587
     properties:
       mail:
